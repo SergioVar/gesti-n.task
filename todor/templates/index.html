@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <!-- Contenedor principal centrado y con márgenes -->
+    <div class="container-sm text-center">
+        <!-- Espacios en blanco para dar separación -->
+        <br>
+        <br>
+        <br>
+
+        <!-- Título principal de la página de inicio -->
+        <h1 class="display-3">BIENVENIDO A TU LISTA DE TAREAS</h1>
+        <br>
+        <br>
+        
+        <!-- Descripción de la plataforma -->
+        <p class="lead">
+            Aquí puedes registrar y organizar todas tus tareas, obteniendo una visión clara de tus responsabilidades y prioridades. 
+            Nuestra plataforma te ayuda a mantener el seguimiento y la eficiencia en la gestión de tus actividades diarias.
+        </p>
+
+        <!-- Línea horizontal para separar secciones -->
+        <hr class="my-4">
+
+        <!-- Pregunta sobre la existencia de una cuenta -->
+        <p>¿Tienes una cuenta?</p>
+
+        <!-- Botones para iniciar sesión o registrarse, centrados en la pantalla -->
+        <div class="d-flex justify-content-center">
+            <!-- Botón para iniciar sesión -->
+            <a href="{{ url_for('auth.login') }}" class="btn btn-primary mx-2">Iniciar sesión</a>
+            <!-- Botón para registrarse -->
+            <a href="{{ url_for('auth.register') }}" class="btn btn-secondary mx-2">Registrarse</a>
+        </div>
+    </div>
+{% endblock %}
